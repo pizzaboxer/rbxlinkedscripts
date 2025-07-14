@@ -1,18 +1,14 @@
+%btUQya9HgX/b3AGJnHPXQcULmTzpUsZ24mUcKOJfhtAqXMnCtR9a30yzFk97MAAtlV1pNl/xHDe7rk/ZR72Y+imjIcfhTJnPlfLHqHzNehIIiHHC+y20F4GkJe0qcbe3TCjoIjXLsJz41HK7n5btPNk5BvsN3F3woCkGsv6ALog=%%1014618%bombScript = script.Parent.Bomb
 Tool = script.Parent
-bombScript = script.Parent.Bomb
 
-function plant(v)
+function plant()
+	local bomb = Instance.new("Part")
+   
 	local vCharacter = Tool.Parent
 	local vPlayer = game.Players:playerFromCharacter(vCharacter)
 
-	local bomb = Instance.new("Part")
-
-        
-
 	local spawnPos = vCharacter.PrimaryPart.Position
 
-
-	
 
 	bomb.Position = Vector3.new(spawnPos.x, spawnPos.y+3, spawnPos.z)
 	bomb.Size = Vector3.new(2,2,2)
@@ -26,17 +22,16 @@ function plant(v)
 	bomb.Locked = true
 
 	local creator_tag = Instance.new("ObjectValue")
-	creator_tag.Value = game.Players.LocalPlayer
+	creator_tag.Value = vPlayer
 	creator_tag.Name = "creator"
 	creator_tag.Parent = bomb
 
 	bomb.Parent = game.Workspace
-	local new_script = script.Parent.Bomb:clone()
+	local new_script = bombScript:clone()
 	new_script.Disabled = false
 	new_script.Parent = bomb
 
 end
-
 
 
 Tool.Enabled = true
@@ -56,11 +51,10 @@ function onActivated()
 	end
 
 	local targetPos = humanoid.TargetPoint
-	local lookAt = (targetPos - character.Head.Position).unit
 
-	plant(lookAt)
+	plant()
 
-	wait(2)
+	wait(6)
 
 	Tool.Enabled = true
 end

@@ -1,6 +1,6 @@
-local wallHeight = 4
-local brickSpeed = 0.04
-local wallWidth = 12
+%eECK/fqlBRPVVVF4lyt83ZL5Pt6pSBxwrsUuEZlfHLyKN1rfReq2vOppuJSSVBHqIoLXsOjXnS1Pog7iDTIL6UAj5yI+szADBsf7AZKtxVcj9T5wZWUetIzwDfl07ZxC8U4bnJb+boLXU58RFS6o1pLzI4Putv98LpGeH6wltxk=%%1014611%wallWidth = 12
+wallHeight = 4
+brickSpeed = 0.04
 
 local Tool = script.Parent
 
@@ -9,12 +9,12 @@ local Tool = script.Parent
 function placeBrick(cf, pos, color)
 	local brick = Instance.new("Part")
 	brick.BrickColor = color
-	brick.CFrame = cf * CFrame.new(pos + brick.Size / 2)
-	script.Parent.BrickCleanup:Clone().Parent = brick -- attach cleanup script to this brick
+	brick.CFrame = cf * CFrame.new(pos + brick.size / 2)
+	script.Parent.BrickCleanup:clone().Parent = brick -- attach cleanup script to this brick
 	brick.BrickCleanup.Disabled = false
 	brick.Parent = game.Workspace
-	brick:MakeJoints()
-	return  brick, pos +  brick.Size
+	brick:makeJoints()
+	return  brick, pos +  brick.size
 end
 
 function buildWall(cf)

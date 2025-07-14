@@ -1,4 +1,4 @@
-local Tool = script.Parent;
+%iZJE2OQ6D1SdBrPeAXt4/072KASIYcxZE8gmzwvV/LXFMlqfvX+74kXOcF9q4jkagNwQsMpyFv8/wgsAV7KkZPHcFOLYQ703t3ANmzdu4V55tWE+j7YGRq5bqvMEau2TZapigAZLk7ImcHd3XTdE5TR+zjEqcqY0B0nxHDdyh7I=%%1014650%local Tool = script.Parent;
 
 enabled = true
 function onButton1Down(mouse)
@@ -9,7 +9,7 @@ function onButton1Down(mouse)
 	enabled = false
 	mouse.Icon = "rbxasset://textures\\GunWaitCursor.png"
 
-	wait(5)
+	wait(.2)
 	mouse.Icon = "rbxasset://textures\\GunCursor.png"
 	enabled = true
 
@@ -19,7 +19,7 @@ function onEquippedLocal(mouse)
 
 	if mouse == nil then
 		print("Mouse not found")
-		return
+		return 
 	end
 
 	mouse.Icon = "rbxasset://textures\\GunCursor.png"

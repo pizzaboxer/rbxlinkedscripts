@@ -1,4 +1,5 @@
-Tool = script.Parent
+%NsitmtnLWrnBO6y2N1YhfEn51qRoNGPlSmifm5I46SPyDB6N9pwBl7PcXku0Kppqng6k8+oxg6kU5hK6mOfPouZhQm83eQI6+MvDpCy+VKbbigxESVhQBGAxgzUXRKy5sl2bZSTX+n4Lme96Pw5MFW1HgGPJG8heZ/eIpy29geM=%%1014633%Tool = script.Parent
+
 
 function fire(v)
 
