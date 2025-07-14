@@ -1,0 +1,7 @@
+linkedweapons script archive by pizzaboxer
+roblox started disallowing access to the linkedscripts that handle the weapons in many brickbattle maps a few years back, causing them to break
+so i managed to scrape together old sources of the scripts (even including some of their original signatures if you're into that)
+
+some of the scripts i reconstructed from their older hopperbin variants (slingshotprojectile, trowelbrickcleanup, superballlauncher and timebombplant)
+
+if you're gonna use these scripts, don't forget to remove the signature at the top (if it has one)
